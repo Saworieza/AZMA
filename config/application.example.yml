@@ -1,0 +1,4 @@
+development:
+  ADMIN_EMAIL: enter email address string here
+  ADMIN_PASSWORD: enter password string here
+  ADMIN_USERNAME: enter username string here

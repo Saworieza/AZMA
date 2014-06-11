@@ -1,0 +1,40 @@
+<!--these two work the navbar-->
+<%= stylesheet_link_tag    "home" %>
+<%= stylesheet_link_tag    "nivo-style" %>
+
+<% title "Forums" %>  
+
+<table>  
+  <tr>  
+    <th width="70%">Forum</th>  
+    <th width="30%">Last Post</th>  
+  </tr>  
+  <% for forum in @forums %>  
+  <tr>  
+    <td><h4><%= link_to forum.name, forum_path(forum.id) %></h4>  
+      <%= forum.description %><br />
+      <%= forum.topics.count %> topics</td>  
+      <td class="right">
+        <% if forum.most_recent_post %><%= forum.most_recent_post.last_post_at %> ago
+        <% else %>
+        no posts
+        <% end %>
+      </td> 
+      <% if admin_is_logged_in? %>
+      <td><%= link_to "Show", forum %></td>  
+      <td><%= link_to "Edit", edit_forum_path(forum) %></td>  
+      <td><%= link_to "Destroy", forum, :confirm => 'Are you sure?', :method => :delete %></td> 
+      <% else %>
+      <td></td> 
+      <td></td>
+      <td></td>
+      <% end %> 
+    </tr>  
+    <% end %>  
+  </table>
+
+  <% if admin_is_logged_in? %>
+
+  <p><%= link_to "New Forum", new_forum_path %></p>  
+
+  <% end %>

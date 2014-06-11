@@ -1,0 +1,106 @@
+body { 
+	width: 90% auto;
+	margin:auto;
+	/*font-size:30px !important;*/
+  	/*font-family: 'Tangerine', serif;*/
+  	/*text-shadow: 4px 4px 4px #aaa;*/
+    margin-left:inherit;
+    padding-left: 40px;
+    padding-right: 20px;
+    /*needs work background: linear-gradient(to bottom, blue, white);*/
+    
+}
+
+html,body { 
+	background: transparent;
+	height: 100%;
+}
+
+footer ul li{
+	display:inline;
+}
+.header{
+	width:100%;
+	height:auto;
+	margin-top: 2px;
+	border:1px solid purple;
+}
+.nav-pills li {
+	display:inline;
+	font-size: 1em;
+	color:green;
+	font-weight: ;
+
+}
+
+.nav-pills{
+	padding-left: 20px;
+}
+p.azm{
+    color: black;
+    font-family:Cambria, Georgia, sans-serif;
+    font-style: italic;
+    text-align: left;
+    font-size: 14px;
+    margin:0;
+
+    color:#777;
+    padding-left: 15px;
+    line-height: 22px;
+    border-left: 8px solid rgba(63. 148, 148, 0.1);
+    
+}
+
+strong.azma{
+    padding-top: 30px;
+        color:purple;
+    
+}
+p.azma{
+     color: black;
+    font-family:Cambria, Georgia, sans-serif;
+    font-style: italic;
+    text-align: left;
+    font-size: 14px;
+    margin:0;
+
+    color:#777;
+    padding-left: 15px;
+    line-height: 22px;
+    border-left: 8px solid rgba(63. 148, 148, 0.1);
+}
+
+
+
+.bg
+{
+	width: 150px;
+	height: 150px;
+	background-size: 100% 100%;
+	padding-left: 20px;
+}
+
+
+
+.footer
+{
+	background: transparent;
+}
+
+.hover{
+	background-color: red;
+    
+}
+p{
+	color: black;
+    font-family:Cambria, Georgia, sans-serif;
+    font-style: italic;
+    text-align: left;
+    font-size: 16px;
+    margin:0;
+
+    color:#777;
+    padding-left: 15px;
+    line-height: 22px;
+    border-left: 8px solid rgba(63. 148, 148, 0.1);
+}

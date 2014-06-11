@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title>Azma | Gallery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+
+<!--these two work the navbar-->
+<%= stylesheet_link_tag    "home" %>
+<%= stylesheet_link_tag    "nivo-style" %>
+
+<%= stylesheet_link_tag    "layout" %>
+<%= stylesheet_link_tag    "prettyPhoto" %>
+
+<%= javascript_include_tag "jquery-1.4.1.min" %>
+<%= javascript_include_tag "jquery.prettyPhoto" %>
+
+<script type="text/javascript">
+$(document).ready(function () { $("a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded'}); });
+</script>
+</head>
+<body id="top">
+
+  <div id="shout">
+    <h2>Listing galleries</h2>
+  </div>
+<!-- ##################################################################################### -->
+<table>
+  <thead>
+    <tr>
+      <th><a href="#"> 2011</a></th>
+      <th> <a href="#"> 2012 </a></th>
+      <th> <a href="#"> 2013 </a></th>
+      <th> <a href="#"> 2014 </a></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @galleries.each do |gallery| %>
+      <tr>
+        <% if admin_is_logged_in? %>
+        <td><%= link_to 'Show', gallery %></td>
+        <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
+        <td><%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if someone_is_logged_in? %>
+<%= link_to 'New Gallery', new_gallery_path %>
+<% end %>
+<!-- ##################################################################################### -->
+
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="container" class="clear">
+    <!-- ####################################################################################################### -->
+    <div id="gallery" class="clear">
+      <ul>
+        <li><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 1"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 2"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li><a href="/assets/demo/member2.png" rel="prettyPhoto[gallery1]" title="Image 3"><img src="/assets/demo/member2.png" alt="" /></a></li>
+        <li class="last"><a href="/assets/demo/beauty.png" rel="prettyPhoto[gallery1]" title="Image 4"><img src="/assets/demo/beauty.png" alt="" /></a></li>
+        <li><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 5"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 6"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 7"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li class="last"><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 8"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li><a href="/assets/demo/ki2.jpg  " rel="prettyPhoto[gallery1]" title="Image 9"><img src="/assets/demo/ki2.jpg" alt="" /></a></li>
+        <li><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 10"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 11"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+        <li class="last"><a href="/assets/demo/658x432.gif" rel="prettyPhoto[gallery1]" title="Image 12"><img src="/assets/demo/215x120.gif" alt="" /></a></li>
+      </ul>
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="pagination">
+      <ul>
+        <li class="prev"><a href="#">&laquo; Previous</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li class="splitter">&hellip;</li>
+        <li><a href="#">6</a></li>
+        <li class="current">7</li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li class="splitter">&hellip;</li>
+        <li><a href="#">14</a></li>
+        <li><a href="#">15</a></li>
+        <li class="next"><a href="#">Next &raquo;</a></li>
+      </ul>
+    </div>
+    <!-- ####################################################################################################### -->
+  </div>
+</div>
+
+<div class="wrapper">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2014-2020 - All Rights Reserved - <a href="#">Azma.com</a></p>
+    
+  </div>
+</div>
+</body>
+</html>
+
+
+
