@@ -1,7 +1,10 @@
+/*keep the measurements in check and pay attention to the paddings. 
+they can ruin your week if not set right. */
 .tabs {
     position: relative;
 	margin: 30px auto;
 	width: 100%;
+	max-width: 1000px;
 }
 
 .tabs input {
@@ -17,13 +20,16 @@
 	cursor: pointer;
 }
 .tabs input#tab-2{
+	/*this increments value by two in the next tab. therefore not keeping it incremented may have you clicking on the wrong tabs and wondering what is wrong with your code*/
 	left: 250px;
 }
 .tabs input#tab-3{
-	left: 240px;
+	/*this increments value by two in the next tab. therefore not keeping it incremented may have you clicking on the wrong tabs and wondering what is wrong with your code*/
+	left: 500px;
 }
 .tabs input#tab-4{
-	left: 360px;
+	/*this increments value by two in the next tab. therefore not keeping it incremented may have you clicking on the wrong tabs and wondering what is wrong with your code*/
+	left: 750px;/*so, if you create another tab after this, left would be 1000. ie, add the size you want to previous value which in this case is 750*/
 }
 
 .tabs label {
@@ -38,7 +44,7 @@
 	line-height: 40px;
 	height: 40px;
 	position: relative;
-	padding: 0 20px;
+	padding: 0 0px;
     float: left;
 	display: block;
 	

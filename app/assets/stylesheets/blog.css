@@ -14,23 +14,38 @@
 	font-style: normal;
 }
 body {
-	background: url(../images/bg-body.jpg) repeat left top;
+	background: url(../) repeat left top;
 	font-family: 'Muli-Light';
 	margin: 0;
 }
 img {
 	border: 0;
 }
+
+.body{
+	width:700px;
+	z-index: 2;
+}
+
+.contentb{
+margin-left:100px;
+padding:20px;
+width:900px;
+}
+
+hr{
+	margin-top:10px;
+}
 /*------------------------------ HEADER ------------------------------*/
 #navigation li a, #contact form input.btn {
 	background: url(../images/buttons.png) no-repeat;
 }
 #blog div.box, #blog div.box div.header {
-	background: url(../images/bg-boxborders.png) no-repeat;
+	background: url(../) no-repeat;
 }
 /*------------------------------ HEADER ------------------------------*/
 #header {
-	background: url(../images/bg-header.png) no-repeat center top;
+	background: url(../) no-repeat center top;
 	height: 206px;
 	text-align: right;
 }
@@ -79,7 +94,7 @@ img {
 }
 /*------------------------------ CONTENTS ------------------------------*/
 #contents {
-	background: url(../images/bg-content-top.png) no-repeat center -6px;
+	background: url(../) no-repeat center -6px;
 	min-height: 85px;
 	margin-top: -79px;
 	position: relative;
@@ -118,7 +133,7 @@ img {
 }
 /** adbox **/
 #contents #adbox {
-	background: url(../images/bg-adbox.png) no-repeat center -6px;
+	background: url(../) no-repeat center -6px;
 	height: 585px;
 	width: 100%;
 	padding-top: 9px;
@@ -148,7 +163,7 @@ img {
 	text-transform: uppercase;
 }
 #adbox div.details a {
-	background: url(../images/arrow.gif) no-repeat right center;
+	background: url(../) no-repeat right center;
 	color: #848484;
 	font-style: italic;
 	padding-right: 15px;
@@ -158,7 +173,7 @@ img {
 	color: #7c844b;
 }
 #adbox span.footer {
-	background: url(../images/bg-adboxbottom.png) no-repeat center top;
+	background: url(../) no-repeat center top;
 	display: block;
 	height: 146px;
 	width: 100%;
@@ -171,7 +186,7 @@ img {
 	padding: 18px 0;
 }
 #featured a {
-	background: url(../images/buttons2.png) no-repeat;
+	background: url(../) no-repeat;
 	display: inline-block;
 	height: 318px;
 	width: 314px;
@@ -220,10 +235,11 @@ img {
 /** SIDEBAR **/
 #sidebar {
 	float: right;
+	clear:left;
 	width: 278px;
 }
 #sidebar h3 {
-	background: url(../images/border4.png) repeat-x left bottom;
+	background: url(../) repeat-x left bottom;
 	margin: 0 0 12px;
 	padding-bottom: 12px;
 }
@@ -233,7 +249,7 @@ img {
 	padding: 0;
 }
 #sidebar ul li {
-	background: url(../images/border4.png) repeat-x left bottom;
+	background: url(../) repeat-x left bottom;
 	display: inline-block;
 	width: 100%;
 	padding: 11px 0;
@@ -282,7 +298,7 @@ img {
 }
 #services h5 {
 	float: right;
-	background: url(../images/border4.png) repeat-x left bottom;
+	background: url(../) repeat-x left bottom;
 	width: 480px;
 	margin: 0 0 12px;
 	padding-bottom: 12px;
@@ -301,12 +317,12 @@ img {
 	padding-top: 8px;
 }
 #blog div.box div.body {
-	background: url(../images/bg-box.png) repeat-y left top;
+	background: url(../) repeat-y left top;
 	padding-left: 2px;
 	padding-right: 10px;
 }
 #blog div.box h3 a {
-	background: url(../images/bg-heading.png) no-repeat right top;
+	background: url(..) no-repeat right top;
 	color: #fff;
 	display: block;
 	height: 59px;
@@ -411,7 +427,7 @@ img {
 }
 /** Articles **/
 #articles {
-	background: url(../images/border2.png) no-repeat center bottom;
+	background: url(../) no-repeat center bottom;
 	color: #474747;
 	margin: 0 auto;
 	padding-bottom: 8px;
@@ -429,11 +445,11 @@ img {
 	color: #6d773a;
 }
 #articles div.header {
-	background: url(../images/border.png) no-repeat center top;
+	background: url(../) no-repeat center top;
 	padding-top: 8px;
 }
 #articles div.body {
-	background: url(../images/bg-pattern.jpg) repeat-y center top;
+	background: url(../) repeat-y center top;
 	min-height: 300px;
 }
 #articles div.body > div {
@@ -451,7 +467,7 @@ img {
 }
 #articles div.section {
 	float: left;
-	background: url(../images/border3.png) repeat-y left top;
+	background: url(../) repeat-y left top;
 	height: 284px;
 	width: 295px;
 	padding: 20px 5px 0 20px;
@@ -462,7 +478,7 @@ img {
 	padding-left: 0;
 }
 #articles div.section h3 {
-	background: url(../images/border4.png) repeat-x 1px bottom;
+	background: url(../) repeat-x 1px bottom;
 	color: #836544;
 	font-family: 'Caudex-Regular';
 	font-weight: normal;
@@ -476,7 +492,7 @@ img {
 	padding: 0;
 }
 #articles ul.blog li {
-	background: url(../images/border4.png) repeat-x 1px top;
+	background: url(../) repeat-x 1px top;
 	margin-bottom: 12px;
 	padding-top: 13px;
 }
@@ -506,7 +522,7 @@ img {
 	width: 100px;
 }
 #connect a {
-	background: url(../images/icons.png) no-repeat;
+	background: url(../) no-repeat;
 	display: inline-block;
 	height: 26px;
 	width: 25px;

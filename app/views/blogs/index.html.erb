@@ -4,7 +4,7 @@
 
 <%= stylesheet_link_tag    "blog" %>
 
-<h1>Blogs</h1>
+<h1 style="font-size:20px;">Blogs</h1>
 <!--facebook javascript sdk-->
 
 <div id="fb-root"></div>
@@ -19,24 +19,26 @@
 <% if someone_is_logged_in? %>
 <%= link_to 'Post a New Blog', new_blog_path, class: 'button radius' %>
 <% end %>
-<table>
-  <!--<thead>
-    <tr>
-      <th>Title</th>
-      
-    </tr>
-    <tr>
-      <th>Body</th>
-    </tr>
-  </thead>-->
 
-  <tbody>
+<div class="box">
+  <div class="contentb">
+<table style="width:700px;">
+   <tbody>
     <% @blogs.each do |blog| %>
+    
       <tr>
-        <td style="font-family:Trebuchet; font-size:20px; font-weight:bold;"><%= blog.title %></td>
+        <td style="font-family:Georgia; font-size:18px; font-weight:bold;"><h3><%= blog.title %></h3></td>
       </tr>
       <tr>
-        <td><%= blog.body %></td>
+
+        <td class="body"><img src="/assets/demo/smiling2.jpg" alt="Img"><br><!--replace this with a user uploaded image maybe during creation of blog post?-->
+          <%= blog.body %>
+        <p><em>Posted <%= time_ago_in_words(blog.created_at) %> ago</em></p>
+        <hr>
+
+        <!--fb comment-->
+        <div class="fb-comments" data-href="https://www.facebook.com/AzmaKenya" data-numposts="5" data-colorscheme="light"></div>
+        </td>
 
         <% if admin_is_logged_in? %>
         <td><%= link_to 'Show', blog %></td>
@@ -47,8 +49,52 @@
     <% end %>
   </tbody>
 </table>
-<!--fb comment-->
-        <div class="fb-comments" data-href="https://www.facebook.com/AzmaKenya" data-numposts="5" data-colorscheme="light"></div>
+</div><!--header-->
+<!-- WORK IN PORGRESS<% @blogs.each do |blog| %>
+    
+      <tr>
+        <td style="font-family:Georgia; font-size:18px; font-weight:bold;"><h3><%= blog.title %></h3></td>
+      </tr>
+      <tr>
+          <p><em>Posted <%= time_ago_in_words(blog.created_at) %> ago</em></p>
+        <hr>
+    <% end %>-->
+
+</div><!-- box -->
+
+<div id="sidebar">
+        <h3>Latest Blog Posts</h3>
+        <ul class="posts">
+          <li>
+            <img src="" alt="Img"> <span>Posted Feb. 21, 2023</span> <a href="blog.html">Choosing the leader saa nane </a>
+          </li>
+          <li>
+            <img src="" alt="Img"> <span>Posted Feb. 20, 2023</span> <a href="blog.html">Mathematics and sleeping giants</a>
+          </li>
+          <li>
+            <img src="" alt="Img"> <span>Posted Feb. 19, 2023</span> <a href="blog.html">its two am and i should go sleep</a>
+          </li>
+          <li>
+            <img src="" alt="Img"> <span>Posted Feb. 18, 2023</span> <a href="blog.html">sleep at three. sawa?</a>
+          </li>
+        </ul>
+        <h3>Blog Categories</h3>
+        <ul>
+          <li class="selected">
+            <a href="blog.html">Community Service</a>
+          </li>
+          <li>
+            <a href="services.html">Leadership</a>
+          </li>
+          <li>
+            <a href="services.html">Contests</a>
+          </li>
+          <li>
+            <a href="services.html">some category</a>
+          </li>
+        </ul>
+      </div>
+
 
 
 
@@ -65,7 +111,7 @@
               <h3><a href="blog.html">Choosing The Right chicken to eat</a></h3>
               <img src="/assets/demo/smiling2.jpg" alt="Img">
               <p>
-                This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Sawo Jr</a> for Azma, for free. You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="http://www.freewebsitetemplates.com/forums/">0703-597-595</a>.
+                This website template has been designed by <a href="">Sawo Jr</a> for Azma, for free. You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="">0703-597-595</a>.
               </p>
               <p class="infos">
                 Posted Feb 21, 2023 by <a href="blog.html" class="author">Admin</a> with <a href="blog.html" class="comments">0 Comments</a>
@@ -76,7 +122,7 @@
               <h3><a href="blog.html">What is the name of the guy who invented M-pesa</a></h3>
               <img src="/assets/demo/smiling2.jpg" alt="Img">
               <p>
-                This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Sawo Jr</a> for Azma, for free? You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="http://www.freewebsitetemplates.com/forums/">0703-597-595</a>.
+                This website template has been designed by <a href="">Sawo Jr</a> for Azma, for free? You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="/">0703-597-595</a>.
               </p>
               <p class="infos">
                 Posted Feb 21, 2023 by <a href="blog.html" class="author">Admin</a> with <a href="blog.html" class="comments">0 Comments</a>
@@ -87,7 +133,7 @@
               <h3><a href="blog.html">Is this thing for girls only</a></h3>
               <img src="/assets/demo/smiling2.jpg" alt="Img">
               <p>
-                This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Sawo jr</a> for Azma, for free. You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="http://www.freewebsitetemplates.com/forums/">0703-597-595</a>.
+                This website template has been designed by <a href="">Sawo jr</a> for Azma, for free. You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="">0703-597-595</a>.
               </p>
               <p class="infos">
                 Posted Feb 21, 2023 by <a href="blog.html" class="author">Admin</a> with <a href="blog.html" class="comments">0 Comments</a>
@@ -98,7 +144,7 @@
               <h3><a href="blog.html">Coding high on weed, how many errors to debug?</a></h3>
               <img src="/assets/demo/smiling2.jpg" alt="Img">
               <p>
-                This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Sawo jr</a> for Azma, for free. You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="http://www.freewebsitetemplates.com/forums/">0703-597-595</a>.
+                This website template has been designed by <a href="/">Sawo jr</a> for Azma, for free. You can replace all this text with your own text. If you're having problems editing this website then don't hesitate to give me a call through <a href="/">0703-597-595</a>.
               </p>
               <p class="infos">
                 Posted Feb 21, 2023 by <a href="blog.html" class="author">Admin</a> with <a href="blog.html" class="comments">0 Comments</a>
@@ -114,16 +160,16 @@
         <h3>Latest Blog Posts</h3>
         <ul class="posts">
           <li>
-            <img src="images/thumb-smiling.png" alt="Img"> <span>Posted Feb. 21, 2023</span> <a href="blog.html">Choosing the leader saa nane </a>
+            <img src="" alt="Img"> <span>Posted Feb. 21, 2023</span> <a href="blog.html">Choosing the leader saa nane </a>
           </li>
           <li>
-            <img src="images/thumb-beauty.png" alt="Img"> <span>Posted Feb. 20, 2023</span> <a href="blog.html">Mathematics and sleeping giants</a>
+            <img src="" alt="Img"> <span>Posted Feb. 20, 2023</span> <a href="blog.html">Mathematics and sleeping giants</a>
           </li>
           <li>
-            <img src="images/thumb-shampoo.png" alt="Img"> <span>Posted Feb. 19, 2023</span> <a href="blog.html">its two am and i should go sleep</a>
+            <img src="" alt="Img"> <span>Posted Feb. 19, 2023</span> <a href="blog.html">its two am and i should go sleep</a>
           </li>
           <li>
-            <img src="images/thumb-sideview.png" alt="Img"> <span>Posted Feb. 18, 2023</span> <a href="blog.html">sleep at three. sawa?</a>
+            <img src="" alt="Img"> <span>Posted Feb. 18, 2023</span> <a href="blog.html">sleep at three. sawa?</a>
           </li>
         </ul>
         <h3>Blog Categories</h3>
