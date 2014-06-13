@@ -1,0 +1,44 @@
+<!--these two work the navbar-->
+<%= stylesheet_link_tag    "home" %>
+<%= stylesheet_link_tag    "nivo-style" %>
+
+<%= stylesheet_link_tag    "eveents" %>
+
+<h1>Listing Events</h1>
+
+<% if someone_is_logged_in? %>
+<%= link_to 'New Eveent', new_eveent_path %>
+<% end %>
+<div class="ev-container">
+<table border="" id="ev-table">
+  <thead>
+    <tr class="ev-list" ><td colspan="3" >Events</td></tr>
+    <tr class="ev-count" ><td colspan="3" > x Events Listed<td></tr><!--a counter for number of events listed. javascript to count number of titles-->
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Description</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eveents.each do |eveent| %>
+      <tr>
+        <td><%= eveent.Date %></td>
+        <td><%= eveent.title %></br>
+        <%= eveent.description %></td>
+
+        <% if admin_is_logged_in? %>
+        <td><%= link_to 'Show', eveent %></td>
+        <td><%= link_to 'Edit', edit_eveent_path(eveent) %></td>
+        <td><%= link_to 'Destroy', eveent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div><!-- container -->
+<!--<div style="background: -prefix-linear-gradient(top, blue, white); height:200px; width:200px; border:1px solid black;"></div>-->
+
+<br>

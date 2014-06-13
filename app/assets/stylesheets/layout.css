@@ -19,7 +19,7 @@ body{
 	font-size:13px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:#FFFFFF;
-	background-color:#1C1C1C; that gradient thingy
+	background-color:; that gradient thingy
 	}
 
 img{margin:0; padding:0; border:none;}
@@ -47,7 +47,7 @@ a{outline:none; text-decoration:none;}
 
 div.wrapper{
 	display:block;
-	width:100%;
+	width:85% auto;
 	margin:0;
 	text-align:left;
 	}
@@ -63,7 +63,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col1, .col1 a{color:#DCDCDC; background-color:#0F1719; border-bottom:1px solid #000000;}
 .col1 a{border-bottom:none;}
 .col2{color:#3A3A3A; background-color:#F3F0E5; border-top:1px solid #333333; border-bottom:5px solid #A4A4A4;}
-.col3{color:#9FA4AA; background-color:#000000; border-bottom:5px solid #444444;}
+.col3{ width:85% auto; color:#9FA4AA; background-color:; border-bottom:5px solid #444444;}
 .col3 a{color:#FF412C; background-color:#000000;}
 
 /* ----------------------------------------------Generalise-------------------------------------*/
@@ -121,6 +121,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	}
 
 #shout h2{
+	color:black;
 	margin:0;
 	padding:0;
 	font-size:56px;

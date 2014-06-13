@@ -28,8 +28,9 @@ footer ul li{
 .nav-pills li {
 	display:inline;
 	font-size: 1em;
+    line-height: 30px !important;
 	color:green;
-	font-weight: ;
+	font-weight: normal;
 
 }
 
@@ -53,7 +54,7 @@ p.azm{
 
 strong.azma{
     padding-top: 30px;
-        color:purple;
+    color:purple;
     
 }
 p.azma{
@@ -74,10 +75,12 @@ p.azma{
 
 .bg
 {
-	width: 150px;
+	width: 200px;
 	height: 150px;
 	background-size: 100% 100%;
+    padding-top:5px;
 	padding-left: 20px;
+
 }
 
 

@@ -1,0 +1,25 @@
+/**************************GENERAL STYLING********************************/
+body{
+
+}
+
+table{
+	border:"";
+}
+
+.ev-list, .ev-count{
+	border:1px solid silver;
+	height:30px;
+	text-align: center;
+}
+#ev-container{
+	width: auto;
+	max-width:1300px;
+	border:1px solid silver;
+	background-color: green;
+}
+#ev-table{
+	border:1px solid silver;
+	width:900px auto;
+	min-width:900px;
+}

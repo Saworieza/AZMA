@@ -8,6 +8,183 @@
 <%= stylesheet_link_tag    "uikit.min" %>
 <%= stylesheet_link_tag    "custom" %>
 
+ <%= stylesheet_link_tag    "home" %>
+
+    <%= stylesheet_link_tag    "themes/default/default"  %>
+    <%= stylesheet_link_tag    "themes/light/light" %>
+    <%= stylesheet_link_tag    "themes/dark/dark" %>
+    <%= stylesheet_link_tag    "themes/bar/bar" %>
+    <%= stylesheet_link_tag    "nivo-slider" %>
+    <%= stylesheet_link_tag    "nivo-style" %>
+
+    <style type="text/css">
+    	/* STRUCTURE */
+
+#pagewrap {
+	padding: 5px;
+	width: 1200px;
+	height: 100%;
+	min-height: 1200px;
+	margin: 20px auto;
+}
+#header {
+	height: 100px;
+	padding: 0 15px;
+}
+#content {
+	width: 24.7%;
+	height:777px;
+	float: left;
+	padding: 5px 15px;
+}
+
+#middle {
+	width: 49.75%; /* Account for margins + border values */
+	height:777px;
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+	width: 24.7%;
+	height:777px;
+	padding: 5px 15px;
+	float: left;
+}
+#footer {
+	clear: both;
+	padding: 0 15px;
+	height:300px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+	#header, #footer {
+		padding: 1% 4%;
+	}
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	#header {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar {
+		display: none;
+	}
+
+}
+
+
+#content {
+	background: #f8f8f8;
+}
+#sidebar {
+	background: #f0efef;
+}
+#header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+
+#pagewrap, #header, #content, #middle, #sidebar, #footer {
+	border: solid 1px #ccc;
+}
+
+/************************************************************************************
+THE THINGS THAT COME IN THE SECTIONS
+*************************************************************************************/
+.evtime{
+	width:100%;
+	height:300px;
+	border:1px solid;
+}
+.evdesc{
+	width:100% auto;
+	height:170px	;
+	border-bottom: 1px solid black;
+}
+.timer{
+	width: 99.5% auto;
+	height:100px;
+	border:1px solid black;
+	clear:both;
+}
+.events{
+	background-color: #9933ff;
+	width:100%;
+	height:30px;
+	padding: 5px 12px 5px;
+
+	float:left;
+	font-weight: bold;
+
+}
+h2 
+/**************************  styling for the facebook like box widget ****************************************/
+#fb-root {
+    display: none;
+}
+
+/* To fill the container and nothing else */
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+	margin-top: 10px !important;
+    width: 100% !important;
+}
+/**************************  styling for the facebook like box widget ****************************************/
+</style>
+
 
 <body>
 		<!--calls all fb plugins-->
@@ -19,15 +196,8 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-    <%= stylesheet_link_tag    "home" %>
-
-    <%= stylesheet_link_tag    "themes/default/default"  %>
-    <%= stylesheet_link_tag    "themes/light/light" %>
-    <%= stylesheet_link_tag    "themes/dark/dark" %>
-    <%= stylesheet_link_tag    "themes/bar/bar" %>
-    <%= stylesheet_link_tag    "nivo-slider" %>
-    <%= stylesheet_link_tag    "nivo-style" %>
+<!-- facebook plugin caller  -->
+   
     
 
     <div id="wrapper">
@@ -44,77 +214,48 @@
         </div>
     </div>
 
-    <div id="pageContainer">
-		<header id="pageHeader"></header>
-	 	<div id="contentContainer" class="clearfix">
-			<nav id="pageNav">Navigation</nav>
+    <div id="pagewrap">
 
-  			<section id="pageSection">
-				<header class="sectionHeader"> Lorem ipsum</header>
-				<article class="sectionArticle">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-
-					<aside id="pageAside">
- 						<p> Page aside Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
- 						</p>
- 					</aside>
-
-				</article>
-				<footer class="sectionFooter">
-					<nav>Kina navigation hapa</nav>
-				</footer>
-			</section>
-
- 			
-		</div>
-		<footer id="pageFooter">
-			main footer
-		</footer>
+	<div id="header">
+		<h1>3 Column Responsive Layout</h1>
 	</div>
-   
-
-<p class="azm"><b>AZMA</b> was founded in the year 2011 and launched on 25th November by students of Precious Blood Girls High School with an intention of increased idea sharing and student networking through social media and community based events. We started out with a website that was able to engage students from different schools in different discussions on issues affecting our societies and solutions to problems.
-			We organise events to bring together youths and at the same time enable us to give back to the society.</p>
-			<br/><br/>
-			<strong>Vision: </strong> To grow young minds
-			and change destitute lives in
-			Africa.
-			<br/><br/>
-			<strong>Mission: </strong> To use the great minds
-			and ideas of the youth today to
-			transform the live  of the underprivileged in
-			their immediate and extensive environments in
-			Africa.
-			<br/><br/>
-			<h3> AZMA’s Values of Excellence</h3>
-			<strong class="azma"> 1. Capability and
-				accountability </strong>
-				<br/>
-            
-            <p class="azma">
-				AZMA is built to develop its members’ and its beneficiaries’ capability and equip them with the knowledge and links to put their abilities to use as they exercise accountability in their actions and way of living.</p>
-				<br/><br/>
-				<strong class="azma"> 2. Creativity and innovation </strong>
-				<br/>
-            <p class="azma">
-				AZMA encourages the use and advancement of one’s creativity and innovativeness to positively impact the society in all ways. To deduce change from our abilities.</p>
-				<br/><br/>
-				<strong class="azma">3. Honesty, integrity, and transparency </strong>
-				<br/><p class="azma">
-				Members and beneficiaries ofAZMA are expected to uphold these values for their excellence in AZMA activities and their lives.</p>
-				<br/><br/>
-				<strong class="azma">4. Discipline </strong>
-				<br/>
-            <p class="az">
-				All Azmats are expected to follow AZMA’s policies and any other rules that may apply.</p>
-				<br/><br/>
+		
+	<div id="content">
+		<h2 class="events">Upcoming events</h2>
+		<div class="evtime">
+			<div class="timer">Timer thingy comes here</div><!--place event timer hapa-->
+			<div class="evdesc">
+				<p>This page demonstrates a 3 column responsive layout, complete with responsive images and jquery slideshow.</p>
 			</div>
-		</div>
- 
+		</div><!--upcoming events-->
+		<!--fb like box-->
+		<div class="fb-like-box" data-href="https://www.facebook.com/AzmaKenya" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+		
+	</div>
+	
+	<div id="middle">
+		<h2>News Feed</h2>
+		<p>At full width all three columns will be displayed side by side. As the page is resized the third column will collapse under the first and second. At the smallest screen size all three columns will be stacked on top of one another.</p>
+		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+	</div>
 
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+	<div id="sidebar">
+		<h2>Recent Posts</h2>
+		<p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+		<p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+	</div>
+	
+	<div id="footer">
+		<h4>Footer</h4>
+		<p>Footer text</p>
+	</div>
+
+</div>
+
+<div style="clear:both"></div>
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 
  	<%= javascript_include_tag "jquery-1.7.1.min" %>
  	<%= javascript_include_tag "jquery.nivo.slider" %>

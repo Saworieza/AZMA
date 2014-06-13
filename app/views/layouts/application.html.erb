@@ -19,9 +19,48 @@
 
 <!--- <%= stylesheet_link_tag    "bootstrap" %>-->
 <%= stylesheet_link_tag    "custom" %>
+<%= stylesheet_link_tag "azma" %>
 
+<%= javascript_include_tag "prefixfree.min" %>
  
- 
+ <!-- A note about the in page css below-. it is quite unpredictable. only works if called within the page. as an external it doesnt rotate on hover-->
+ <style type="text/css">
+      *,*:before,*:after{box-sizing:border-box;}
+html{font:20px arial;}
+.container{width:30rem;padding:3rem 0;margin:0 auto 2rem;position:relative;text-align:center;overflow:hidden; float:right; margin-top: 20px; margin-right:500px;}
+.container:before{position:absolute;left:2rem;top:1rem;content:;text-transform:uppercase;color:#fff;font-size:0.6rem;letter-spacing:0.05rem;
+  
+  transition:opacity 0.2s 2s;
+}
+.container:hover:before{opacity:0;transition-delay:0s;}
+.container span{display:inline-block;font-size:2.5rem;color:#fff;margin:0 0.5rem;opacity:0;
+  transition:1.5s ease-in-out;
+}
+.container:hover>span{opacity:1;backface-visibility:hidden;}
+
+
+.ex-3:before{color:#000;z-index:1;}
+.ex-3{border:0.5rem solid rgb(255,100,0);padding:1rem;}
+.ex-3>div{width:25%;padding:2rem 0;float:left;position:relative;perspective:20rem;}
+.ex-3>div>span{position:absolute;margin:0;left:0;top:0;right:0;bottom:0;opacity:1;line-height:1.5;
+  transition:transform 1s;
+  backface-visibility:hidden;
+}
+.ex-3>div:nth-child(1)>span{background-color:red;transition-delay:100ms;}
+.ex-3>div:nth-child(2)>span{background-color:rgb(0,0,0);transition-delay:300ms; position:absolute; top:-10px; bottom:10px;}
+.ex-3>div:nth-child(3)>span{background-color:rgb(50,205,50);transition-delay:500ms;}
+.ex-3>div:nth-child(4)>span{background-color:rgb(0,0,0);transition-delay:700ms; position:absolute; top:-10px; bottom:10px;}
+.ex-3>div:nth-child(5)>span{background-color:rgb(255,0,255);transition-delay:900ms;}
+
+.ex-3>div:nth-child(2)>span:first-child{border-color:rgb(0,0,0);}
+.ex-3>div:nth-child(3)>span:first-child{border-color:rgb(50,205,50);}
+.ex-3>div:nth-child(4)>span:first-child{border-color:rgb(0,0,0);}
+.ex-3>div:nth-child(5)>span:first-child{border-color:rgb(255,0,255);}
+
+.ex-3>div>span:first-child{transform:rotateY(-180deg);background-color:transparent;color:#000;border:0.5rem solid red;line-height:1;}
+.ex-3:hover>div>span+span{transform:rotateY(180deg);}
+.ex-3:hover>div>span:first-child{transform:rotateY(0deg);}
+    </style>
 
 
 <!--<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -37,7 +76,26 @@
     <header class="header">
       <div class="row">
         <div class="centered">
-          <img class="bg" src="/assets/azmabody.jpg" width="100" height="" >
+          <a href="#"><img class="bg" src="/assets/azmabody.jpg"  ></a>
+        
+        <section class="container ex-3">
+            <div>
+              <span>a</span>
+              <span>A</span>
+            </div>
+            <div>
+              <span>z</span>
+              <span>Z</span>
+            </div>
+            <div>
+              <span>m</span>
+              <span>M</span>
+            </div>
+            <div>
+              <span>a</span>
+              <span>A</span>
+            </div>
+        </section>
         </div>
       </div>
 
@@ -45,14 +103,16 @@
         <nav class="navbar">
           <ul class="nav nav-pills">
 
-             <li><%=link_to "Home", welcome_home_path %></a></li>
+             <li><%=link_to "Home", welcome_home_path %></li>
 
               <li><%= link_to "Blogs", blogs_path %></li><!--works how the forum is supposed to work,xchange them?-->
               <li><%= link_to "Forums", forums_path %></li>
-              <li><%= link_to "Events", events_path %></li>
+              <li><%= link_to "Events", eveents_path %></li>
               <li><%= link_to "About", welcome_aboutus_path %></li>
 
               <li><%= link_to "Gallery", galleries_path %></li>
+              <!--<li><%= link_to "Events", events_path %></li>-->
+
 
               <li> <button><%=link_to "Sign up", new_user_path %> </button></li>
               <li><button><%=link_to "Sign In", new_session_path %></button></li>
@@ -99,6 +159,10 @@
 </div>
 
  <!--<%= javascript_include_tag "bootstrap" %>-->
+ <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
 
  
 

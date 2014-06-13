@@ -1,4 +1,8 @@
 Azma::Application.routes.draw do
+  resources :eveents
+
+  resources :evennts
+
   resources :posts do
     resources :comments, :only => [:create]
   end

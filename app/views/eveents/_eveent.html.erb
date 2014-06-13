@@ -1,0 +1,17 @@
+p<h2><%= link_to_unless_current eveent.title, eveent %></h2>
+<%= simple_format eveent.description %>
+
+<p>
+  <strong>Date:</strong>
+  <%= @eveent.Date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @eveent.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @eveent.description %>
+</p>

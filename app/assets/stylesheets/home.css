@@ -7,7 +7,7 @@ p{
 }
 
 article, aside, figure, footer, header, hgroup, menu, nav, section 
-{ display: block; border:1px solid black;}
+{ display: ; border:1px solid black;}
 
 /* light css reset */
 * { margin : 0; padding : 0; }
@@ -15,7 +15,7 @@ h2, h3, h4, h5, p, ul, ol  { margin : 0 20px; padding : .5em 0; }
 img { border: 0px;}
 
 article,footer{
-    width:75%;
+    width:90% auto;
     height:100%;
 }
 
